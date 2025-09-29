@@ -19,10 +19,8 @@ const kSmallText =
     TextStyle(color: kMainColor, fontWeight: FontWeight.w500, fontSize: 13);
 
 const kButtonTextStyle = TextStyle(
-    height: 0.8,
     color: kMainColor,
-    fontStyle: FontStyle.italic,
-    decoration: TextDecoration.underline,
+    fontWeight: FontWeight.w600,
     fontSize: 20);
 
 const kErrorStyle = TextStyle(

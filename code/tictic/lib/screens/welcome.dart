@@ -23,7 +23,8 @@ class WelcomeScreen extends StatelessWidget {
             children: [
               SvgLogo(),
               SizedBox(height: kVerticalPaddingXL),
-              const TextSlider(),
+              TextSlider(),
+              ElevatedButton(onPressed: (){}, child: Text("Get Started"))
             ],
           ),
         ),
