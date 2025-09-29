@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/sizes.dart';
+import 'package:tictic/widgets/welcome/action_buttons.dart';
+import 'package:tictic/widgets/welcome/horizontal_diver_with_text.dart';
 import 'package:tictic/widgets/welcome/svg_logo.dart';
 import 'package:tictic/widgets/welcome/text_slider.dart';
 
@@ -21,10 +24,19 @@ class WelcomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: kVerticalPaddingXL),
               SvgLogo(),
+              Spacer(),
               SizedBox(height: kVerticalPaddingXL),
               TextSlider(),
-              ElevatedButton(onPressed: (){}, child: Text("Get Started"))
+              Spacer(),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(backgroundColor: kMainColor),
+                child: Text("Continuer sans compte"),
+              ),
+              HorizontalDiverWithText(text: "Ou"),
+              ActionButtons(),
             ],
           ),
         ),
