@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/fonts.dart' show kTextDiverStyle;
-import '../../constants/sizes.dart' show kHorizontalPadding;
+import '../../../constants/fonts.dart';
+import '../../../constants/sizes.dart';
+
 
 class HorizontalDiverWithText extends StatelessWidget {
   final String text;

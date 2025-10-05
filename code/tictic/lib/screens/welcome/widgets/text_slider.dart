@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tictic/constants/sizes.dart';
-import 'package:tictic/widgets/welcome/bullet.dart';
 
-import '../../constants/fonts.dart';
+import '../../../constants/fonts.dart';
+import 'bullet.dart';
 
 class TextSlider extends StatefulWidget {
   const TextSlider({super.key});

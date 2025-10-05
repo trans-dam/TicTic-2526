@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../constants/sizes.dart';
+import '../../../constants/sizes.dart';
 
 class SvgLogo extends StatelessWidget {
   const SvgLogo({super.key});
