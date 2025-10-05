@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictic/constants/fonts.dart';
 import 'package:tictic/constants/sizes.dart';
+import 'package:tictic/l10n/app_localizations.dart';
 
 class ActionButtons extends StatelessWidget {
   const ActionButtons({super.key});
@@ -16,7 +17,7 @@ class ActionButtons extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(textStyle: kLabelStyle),
               onPressed: () {},
-              child: Text("Je me connecte"),
+              child: Text(AppLocalizations.of(context)!.login),
             ),
           ),
           SizedBox(width: kHorizontalPadding),
@@ -25,7 +26,7 @@ class ActionButtons extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(textStyle: kLabelStyle),
-              child: Text("Créer mon compte"),
+              child: Text(AppLocalizations.of(context)!.register),
             ),
           ),
         ],

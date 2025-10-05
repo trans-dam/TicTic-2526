@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/sizes.dart';
+import 'package:tictic/l10n/app_localizations.dart';
 import 'package:tictic/screens/welcome/widgets/action_buttons.dart';
 import 'package:tictic/screens/welcome/widgets/horizontal_diver_with_text.dart';
 import 'package:tictic/screens/welcome/widgets/svg_logo.dart';
@@ -35,9 +36,9 @@ class WelcomeScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(backgroundColor: kMainColor),
-                child: Text("Continuer sans compte"),
+                child: Text(AppLocalizations.of(context)!.continueWithOutLogin),
               ),
-              HorizontalDiverWithText(text: "Ou"),
+              HorizontalDiverWithText(text: AppLocalizations.of(context)!.or),
               ActionButtons(),
             ],
           ),

@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/flutter_localization.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tictic/constants/colors.dart';
 import 'package:tictic/routes.dart';
 
-void main() {
+import 'l10n/app_localizations.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterLocalization.instance.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -13,9 +19,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Application TicTic',
+      title: AppLocalizations.of(context)?.appTitle ?? 'TicTic',
       theme: appTheme,
       routes: routes,
+      supportedLocales: const [Locale('fr'), Locale('en')],
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate, // Material widgets
+        GlobalWidgetsLocalizations.delegate, // widgets génériques
+        GlobalCupertinoLocalizations.delegate, // iOS widgets
+      ],
     );
   }
 }
