@@ -22,4 +22,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get register => 'Register';
+
+  @override
+  String get text_slide_1 => 'Financial harmony in your groups, made simple!';
+
+  @override
+  String get text_slide_2 => 'Instant calculations, fairness guaranteed with TicTic!';
+
+  @override
+  String get text_slide_3 => 'Tedious math? No thanks. Choose simplicity with TicTic!';
+
+  @override
+  String get text_slide_4 => 'TicTic: Share your expenses effortlessly!';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tictic/constants/sizes.dart';
 
 import '../../../constants/fonts.dart';
+import '../../../l10n/app_localizations.dart';
 import 'bullet.dart';
 
 class TextSlider extends StatefulWidget {
@@ -16,11 +17,11 @@ class _TextSliderState extends State<TextSlider> {
 
   int idx = 0;
 
-  final _items = [
-    'L’harmonie financière dans vos groupes, en toute simplicité !',
-    'Calculs instantanés, équité garantie avec TicTic !',
-    'Calculs fastidieux ? Non merci. Optez pour la simplicité avec TicTic !',
-    'TicTic : Vos dépenses partagées en toute simplicité !',
+  late final _items = [
+    AppLocalizations.of(context)!.text_slide_1,
+    AppLocalizations.of(context)!.text_slide_2,
+    AppLocalizations.of(context)!.text_slide_3,
+    AppLocalizations.of(context)!.text_slide_4,
   ];
 
   @override

@@ -124,6 +124,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Register'**
   String get register;
+
+  /// No description provided for @text_slide_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Financial harmony in your groups, made simple!'**
+  String get text_slide_1;
+
+  /// No description provided for @text_slide_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Instant calculations, fairness guaranteed with TicTic!'**
+  String get text_slide_2;
+
+  /// No description provided for @text_slide_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Tedious math? No thanks. Choose simplicity with TicTic!'**
+  String get text_slide_3;
+
+  /// No description provided for @text_slide_4.
+  ///
+  /// In en, this message translates to:
+  /// **'TicTic: Share your expenses effortlessly!'**
+  String get text_slide_4;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

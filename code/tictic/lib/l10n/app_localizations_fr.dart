@@ -22,4 +22,16 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get register => 'Inscription';
+
+  @override
+  String get text_slide_1 => 'L’harmonie financière dans vos groupes, en toute simplicité !';
+
+  @override
+  String get text_slide_2 => 'Calculs instantanés, équité garantie avec TicTic !';
+
+  @override
+  String get text_slide_3 => 'Calculs fastidieux ? Non merci. Optez pour la simplicité avec TicTic !';
+
+  @override
+  String get text_slide_4 => 'TicTic : Vos dépenses partagées en toute simplicité !';
 }
