@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tictic/constants/fonts.dart';
 import 'package:tictic/constants/sizes.dart';
 import 'package:tictic/l10n/app_localizations.dart';
+import 'package:tictic/screens/register/register_screen.dart';
 
 class ActionButtons extends StatelessWidget {
   const ActionButtons({super.key});
@@ -24,7 +25,9 @@ class ActionButtons extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: kHorizontalPadding),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, RegisterScreen.routName);
+              },
               style: ElevatedButton.styleFrom(textStyle: kLabelStyle),
               child: Text(AppLocalizations.of(context)!.register),
             ),
