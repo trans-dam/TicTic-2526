@@ -119,6 +119,60 @@ abstract class AppLocalizations {
   /// **'Login'**
   String get login;
 
+  /// No description provided for @user_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Username'**
+  String get user_name;
+
+  /// No description provided for @user_name_placeholder.
+  ///
+  /// In en, this message translates to:
+  /// **'JohnDoe'**
+  String get user_name_placeholder;
+
+  /// No description provided for @user_email.
+  ///
+  /// In en, this message translates to:
+  /// **'email'**
+  String get user_email;
+
+  /// No description provided for @user_email_placeholder.
+  ///
+  /// In en, this message translates to:
+  /// **'john@doe.com'**
+  String get user_email_placeholder;
+
+  /// No description provided for @user_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get user_password;
+
+  /// No description provided for @already_have_account.
+  ///
+  /// In en, this message translates to:
+  /// **'You already have an account? '**
+  String get already_have_account;
+
+  /// Error message when a required field is not filled
+  ///
+  /// In en, this message translates to:
+  /// **'The \"{fielt_name}\" is required'**
+  String validation_required(Object fielt_name);
+
+  /// No description provided for @invalid_email.
+  ///
+  /// In en, this message translates to:
+  /// **'This email is invalid'**
+  String get invalid_email;
+
+  /// Error message when the password is too short
+  ///
+  /// In en, this message translates to:
+  /// **'Your password must be at least {nb} characters'**
+  String password_length(Object nb);
+
   /// No description provided for @register.
   ///
   /// In en, this message translates to:

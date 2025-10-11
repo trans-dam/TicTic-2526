@@ -3,5 +3,5 @@ import 'package:tictic/screens/welcome/welcome_screen.dart';
 
 final routes = {
   WelcomeScreen.routeName: (context) => const WelcomeScreen(),
-  RegisterScreen.routName: (context) => const RegisterScreen(),
+  RegisterScreen.routName: (context) => RegisterScreen(),
 };

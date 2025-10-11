@@ -3,7 +3,28 @@
   "continueWithOutLogin": "Continuer sans compte",
   "or": "ou",
   "login": "Connexion",
+  "user_name": "Nom d'utilisateur",
+  "user_name_placeholder": "JohnDoe",
+  "user_email": "email",
+  "user_email_placeholder": "john@doe.com",
+  "user_password": "Mot de passe",
+  "already_have_account": "Vous avez déjà un compte ? ",
+  "validation_required": "Le champ \"{fielt_name}\" est requis",
+  "@validation_required": {
+    "description": "Message d'erreur lorsqu'un champ requis n'est pas rempli",
+    "placeholders": {
+      "fielt_name": {}
+    }
+  },
+  "password_length": "Votre mot de passe doit contenir au moins {nb} caractères",
+  "@password_length": {
+    "description": "Erreur lorsque le mot de passe est trop court",
+    "placeholders": {
+      "nb": {}
+    }
+  },
   "register": "Inscription",
+  "invalid_email": "Cet email n’est pas valide.",
   "text_slide_1": "L’harmonie financière dans vos groupes, en toute simplicité !",
   "text_slide_2": "Calculs instantanés, équité garantie avec TicTic !",
   "text_slide_3": "Calculs fastidieux ? Non merci. Optez pour la simplicité avec TicTic !",

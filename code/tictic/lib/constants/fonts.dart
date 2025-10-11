@@ -13,7 +13,7 @@ const kButtonStyle = TextStyle(
     fontSize: 16, fontWeight: FontWeight.w600, color: kBackgroundColor);
 
 const kLabelStyle =
-    TextStyle(color: kMainColor, fontWeight: FontWeight.w500, fontSize: 18);
+    TextStyle(color: kMainColor, fontWeight: FontWeight.w700, fontSize: 18);
 
 const kSmallText =
     TextStyle(color: kMainColor, fontWeight: FontWeight.w500, fontSize: 13);

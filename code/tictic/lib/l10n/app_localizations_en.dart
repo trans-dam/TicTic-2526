@@ -21,6 +21,37 @@ class AppLocalizationsEn extends AppLocalizations {
   String get login => 'Login';
 
   @override
+  String get user_name => 'Username';
+
+  @override
+  String get user_name_placeholder => 'JohnDoe';
+
+  @override
+  String get user_email => 'email';
+
+  @override
+  String get user_email_placeholder => 'john@doe.com';
+
+  @override
+  String get user_password => 'Password';
+
+  @override
+  String get already_have_account => 'You already have an account? ';
+
+  @override
+  String validation_required(Object fielt_name) {
+    return 'The \"$fielt_name\" is required';
+  }
+
+  @override
+  String get invalid_email => 'This email is invalid';
+
+  @override
+  String password_length(Object nb) {
+    return 'Your password must be at least $nb characters';
+  }
+
+  @override
   String get register => 'Register';
 
   @override

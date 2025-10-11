@@ -3,6 +3,27 @@
   "continueWithOutLogin": "Continue without login",
   "or": "or",
   "login": "Login",
+  "user_name": "Username",
+  "user_name_placeholder": "JohnDoe",
+  "user_email": "email",
+  "user_email_placeholder": "john@doe.com",
+  "user_password": "Password",
+  "already_have_account": "You already have an account? ",
+  "validation_required": "The \"{fielt_name}\" is required",
+  "@validation_required": {
+    "description": "Error message when a required field is not filled",
+    "placeholders": {
+      "fielt_name": {}
+    }
+  },
+  "invalid_email": "This email is invalid",
+  "password_length": "Your password must be at least {nb} characters",
+  "@password_length": {
+    "description": "Error message when the password is too short",
+    "placeholders": {
+      "nb": {}
+    }
+  },
   "register": "Register",
   "text_slide_1": "Financial harmony in your groups, made simple!",
   "text_slide_2": "Instant calculations, fairness guaranteed with TicTic!",
