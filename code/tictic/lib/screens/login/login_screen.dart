@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:tictic/constants/fonts.dart';
-import 'package:tictic/constants/sizes.dart';
-import 'package:tictic/l10n/app_localizations.dart';
-import 'package:tictic/screens/login/login_screen.dart';
-import 'package:tictic/screens/scaffold_with_background_image.dart';
-import 'package:tictic/screens/welcome/widgets/svg_logo.dart';
-import 'package:tictic/widgets/anchor.dart';
+import 'package:tictic/screens/register/register_screen.dart';
 import 'package:tictic/widgets/form/user_email_input.dart';
-import 'package:tictic/widgets/form/user_name_input.dart';
-import 'package:tictic/widgets/form/user_password_input.dart';
-import 'package:tictic/widgets/go_back_button.dart';
+import '../../constants/fonts.dart';
+import '../../constants/sizes.dart';
+import '../../l10n/app_localizations.dart';
+import '../../widgets/anchor.dart';
+import '../../widgets/form/user_password_input.dart';
+import '../../widgets/go_back_button.dart';
+import '../scaffold_with_background_image.dart';
+import '../welcome/widgets/svg_logo.dart';
 
-class RegisterScreen extends StatelessWidget {
-  RegisterScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
 
-  static const routName = "/register";
-  final _registerFormKey = GlobalKey<FormState>();
+  static const routName = "/login";
+  final _loginFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +25,13 @@ class RegisterScreen extends StatelessWidget {
           SvgLogo(),
           Spacer(),
           Form(
-            key: _registerFormKey,
+            key: _loginFormKey,
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: kHorizontalPadding,
               ),
               child: Column(
                 children: [
-                  UserNameInput(),
-                  SizedBox(height: kVerticalPaddingL),
                   UserEmailInput(),
                   SizedBox(height: kVerticalPaddingL),
                   UserPasswordInput(),
@@ -44,12 +41,12 @@ class RegisterScreen extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          _registerFormKey.currentState?.validate();
-                          if (_registerFormKey.currentState!.validate()) {
+                          _loginFormKey.currentState?.validate();
+                          if (_loginFormKey.currentState!.validate()) {
                             // Process data.
                           }
                         },
-                        child: Text(AppLocalizations.of(context)!.register),
+                        child: Text(AppLocalizations.of(context)!.login),
                       ),
                     ],
                   ),
@@ -61,14 +58,14 @@ class RegisterScreen extends StatelessWidget {
           Column(
             children: [
               Text(
-                AppLocalizations.of(context)!.already_have_account,
+                AppLocalizations.of(context)!.not_yet_account,
                 style: kItalicText,
               ),
               Anchor(
                 onTap: () {
-                  Navigator.pushNamed(context, LoginScreen.routName);
+                  Navigator.pushNamed(context, RegisterScreen.routName);
                 },
-                text: AppLocalizations.of(context)!.login,
+                text: AppLocalizations.of(context)!.register,
               ),
             ],
           ),
