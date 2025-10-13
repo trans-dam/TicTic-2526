@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/fonts.dart';
 import 'package:tictic/constants/sizes.dart';
 import 'package:tictic/l10n/app_localizations.dart';
 import 'package:tictic/screens/scaffold_with_background_image.dart';
 import 'package:tictic/screens/welcome/widgets/svg_logo.dart';
 import 'package:tictic/widgets/anchor.dart';
-import 'package:tictic/widgets/form/my_input.dart';
+import 'package:tictic/widgets/form/user_name_input.dart';
+import 'package:tictic/widgets/form/user_password_input.dart';
 import 'package:tictic/widgets/go_back_button.dart';
-import 'package:validator_regex/validator_regex.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
@@ -32,59 +31,11 @@ class RegisterScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  MyInput(
-                    label: AppLocalizations.of(context)!.user_name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return AppLocalizations.of(
-                          context,
-                        )!.validation_required(
-                          AppLocalizations.of(context)!.user_name,
-                        );
-                      }
-                    },
-                    hintText: AppLocalizations.of(
-                      context,
-                    )!.user_name_placeholder,
-                    icon: Icons.person,
-                  ),
+                  UserNameInput(),
                   SizedBox(height: kVerticalPaddingL),
-                  MyInput(
-                    label: AppLocalizations.of(context)!.user_email,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return AppLocalizations.of(
-                          context,
-                        )!.validation_required(
-                          AppLocalizations.of(context)!.user_name,
-                        );
-                      } else if (Validator.email(value)) {
-                        return AppLocalizations.of(context)!.invalid_email;
-                      }
-                    },
-                    hintText: AppLocalizations.of(
-                      context,
-                    )!.user_email_placeholder,
-                    keyboardType: TextInputType.emailAddress,
-                    icon: Icons.mail,
-                  ),
+                  UserNameInput(),
                   SizedBox(height: kVerticalPaddingL),
-                  MyInput(
-                    label: AppLocalizations.of(context)!.user_password,
-                    obscureText: true,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return AppLocalizations.of(
-                          context,
-                        )!.validation_required(
-                          AppLocalizations.of(context)!.user_password,
-                        );
-                      } else if (value.length < 9) {
-                        return AppLocalizations.of(context)!.password_length(8);
-                      }
-                    },
-                    icon: Icons.password,
-                  ),
+                  UserPasswordInput(),
                   SizedBox(height: kVerticalPaddingL),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
