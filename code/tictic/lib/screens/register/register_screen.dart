@@ -4,7 +4,7 @@ import 'package:tictic/constants/sizes.dart';
 import 'package:tictic/l10n/app_localizations.dart';
 import 'package:tictic/screens/login/login_screen.dart';
 import 'package:tictic/screens/scaffold_with_background_image.dart';
-import 'package:tictic/screens/welcome/widgets/svg_logo.dart';
+import 'package:tictic/widgets/svg_logo.dart';
 import 'package:tictic/widgets/anchor.dart';
 import 'package:tictic/widgets/form/user_email_input.dart';
 import 'package:tictic/widgets/form/user_name_input.dart';

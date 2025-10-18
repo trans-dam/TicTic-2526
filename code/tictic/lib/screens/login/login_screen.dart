@@ -8,7 +8,7 @@ import '../../widgets/anchor.dart';
 import '../../widgets/form/user_password_input.dart';
 import '../../widgets/go_back_button.dart';
 import '../scaffold_with_background_image.dart';
-import '../welcome/widgets/svg_logo.dart';
+import '../../widgets/svg_logo.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
