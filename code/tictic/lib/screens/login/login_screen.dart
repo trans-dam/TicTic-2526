@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:tictic/screens/home/home_screen.dart';
 import 'package:tictic/screens/register/register_screen.dart';
 import 'package:tictic/widgets/form/user_email_input.dart';
 import '../../constants/fonts.dart';
@@ -13,8 +16,14 @@ import '../../widgets/svg_logo.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  static const routName = "/login";
+  static const routeName = "/login";
   final _loginFormKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController(
+    text: kDebugMode ? "daniel.schreurs@hepl.be" : null,
+  );
+  final _passwordController = TextEditingController(
+    text: kDebugMode ? "1234567890" : null,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +41,43 @@ class LoginScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  UserEmailInput(),
+                  UserEmailInput(emailController: _emailController),
                   SizedBox(height: kVerticalPaddingL),
-                  UserPasswordInput(),
+                  UserPasswordInput(passwordController: _passwordController),
                   SizedBox(height: kVerticalPaddingL),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       ElevatedButton(
-                        onPressed: () {
+                        onPressed: () async {
                           _loginFormKey.currentState?.validate();
                           if (_loginFormKey.currentState!.validate()) {
-                            // Process data.
+                            try {
+                              await FirebaseAuth.instance
+                                  .signInWithEmailAndPassword(
+                                    email: _emailController.text,
+                                    password: _passwordController.text,
+                                  );
+                              Navigator.pushNamed(
+                                context,
+                                HomeScreen.routeName,
+                              );
+                            } on FirebaseAuthException catch (e) {
+                              String message = "";
+                              if (e.code == 'user-not-found') {
+                                message = AppLocalizations.of(context)!
+                                    .error_user_not_found;
+                              } else if (e.code == 'wrong-password') {
+                                message = AppLocalizations.of(context)!
+                                    .error_wrong_password;
+                              } else {
+                                message = AppLocalizations.of(context)!
+                                    .error_generic_login;
+                              }
+                              final snackBar = SnackBar(content: Text(message));
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackBar);
+                            }
                           }
                         },
                         child: Text(AppLocalizations.of(context)!.login),
@@ -63,7 +97,7 @@ class LoginScreen extends StatelessWidget {
               ),
               Anchor(
                 onTap: () {
-                  Navigator.pushNamed(context, RegisterScreen.routName);
+                  Navigator.pushNamed(context, RegisterScreen.routeName);
                 },
                 text: AppLocalizations.of(context)!.register,
               ),

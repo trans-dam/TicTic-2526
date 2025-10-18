@@ -39,11 +39,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get already_have_account => 'You already have an account?';
 
   @override
+  String get email_already_in_use => 'This email is already in use';
+
+  @override
+  String get error_registration_failed => 'Registration failed. Please try again later.';
+
+  @override
+  String get error_user_not_found => 'This user does not exist';
+
+  @override
+  String get error_wrong_password => 'Wrong password provided for that user';
+
+  @override
+  String get error_generic_login => 'Login failed. Please try again later.';
+
+  @override
   String get not_yet_account => 'You don\'t have an account yet?';
 
   @override
   String validation_required(Object fielt_name) {
-    return 'The \"$fielt_name\" is required';
+    return 'The \"$fielt_name\" is required.';
   }
 
   @override

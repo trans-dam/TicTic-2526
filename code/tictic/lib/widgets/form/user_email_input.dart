@@ -5,27 +5,26 @@ import '../../l10n/app_localizations.dart';
 import 'my_input.dart';
 
 class UserEmailInput extends StatelessWidget {
-  const UserEmailInput({super.key});
+  const UserEmailInput({super.key, this.emailController});
+
+  final TextEditingController? emailController;
 
   @override
   Widget build(BuildContext context) {
     return MyInput(
+      controller: emailController,
       label: AppLocalizations.of(context)!.user_email,
       validator: (value) {
         if (value == null || value.isEmpty) {
           return AppLocalizations.of(
             context,
-          )!.validation_required(
-            AppLocalizations.of(context)!.user_name,
-          );
-        } else if (Validator.email(value)) {
+          )!.validation_required(AppLocalizations.of(context)!.user_name);
+        } else if (!Validator.email(value)) {
           return AppLocalizations.of(context)!.invalid_email;
         }
         return null;
       },
-      hintText: AppLocalizations.of(
-        context,
-      )!.user_email_placeholder,
+      hintText: AppLocalizations.of(context)!.user_email_placeholder,
       keyboardType: TextInputType.emailAddress,
       icon: Icons.mail,
     );

@@ -9,6 +9,11 @@
   "user_email_placeholder": "john@doe.com",
   "user_password": "Password",
   "already_have_account": "You already have an account?",
+  "email_already_in_use" : "This email is already in use",
+  "error_registration_failed": "Registration failed. Please try again later.",
+  "error_user_not_found" : "This user does not exist",
+  "error_wrong_password" : "Wrong password provided for that user",
+  "error_generic_login" : "Login failed. Please try again later.",
   "not_yet_account": "You don't have an account yet?",
   "validation_required": "The \"{fielt_name}\" is required.",
   "@validation_required": {

@@ -19,7 +19,7 @@ class ActionButtons extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(textStyle: kLabelStyle),
               onPressed: () {
-                Navigator.pushNamed(context, LoginScreen.routName);
+                Navigator.pushNamed(context, LoginScreen.routeName);
               },
               child: Text(AppLocalizations.of(context)!.login),
             ),
@@ -29,7 +29,7 @@ class ActionButtons extends StatelessWidget {
             padding: const EdgeInsets.only(right: kHorizontalPadding),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, RegisterScreen.routName);
+                Navigator.pushNamed(context, RegisterScreen.routeName);
               },
               style: ElevatedButton.styleFrom(textStyle: kLabelStyle),
               child: Text(AppLocalizations.of(context)!.register),

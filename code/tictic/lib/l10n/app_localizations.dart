@@ -155,6 +155,36 @@ abstract class AppLocalizations {
   /// **'You already have an account?'**
   String get already_have_account;
 
+  /// No description provided for @email_already_in_use.
+  ///
+  /// In en, this message translates to:
+  /// **'This email is already in use'**
+  String get email_already_in_use;
+
+  /// No description provided for @error_registration_failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Registration failed. Please try again later.'**
+  String get error_registration_failed;
+
+  /// No description provided for @error_user_not_found.
+  ///
+  /// In en, this message translates to:
+  /// **'This user does not exist'**
+  String get error_user_not_found;
+
+  /// No description provided for @error_wrong_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Wrong password provided for that user'**
+  String get error_wrong_password;
+
+  /// No description provided for @error_generic_login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login failed. Please try again later.'**
+  String get error_generic_login;
+
   /// No description provided for @not_yet_account.
   ///
   /// In en, this message translates to:
@@ -164,7 +194,7 @@ abstract class AppLocalizations {
   /// Error message when a required field is not filled
   ///
   /// In en, this message translates to:
-  /// **'The \"{fielt_name}\" is required'**
+  /// **'The \"{fielt_name}\" is required.'**
   String validation_required(Object fielt_name);
 
   /// No description provided for @invalid_email.

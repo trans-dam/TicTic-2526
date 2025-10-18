@@ -4,11 +4,14 @@ import '../../l10n/app_localizations.dart';
 import 'my_input.dart';
 
 class UserPasswordInput extends StatelessWidget {
-  const UserPasswordInput({super.key});
+  const UserPasswordInput({super.key, this.passwordController});
+
+  final TextEditingController? passwordController;
 
   @override
   Widget build(BuildContext context) {
     return MyInput(
+      controller: passwordController,
       label: AppLocalizations.of(context)!.user_password,
       obscureText: true,
       validator: (value) {
