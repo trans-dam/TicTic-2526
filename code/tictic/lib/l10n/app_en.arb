@@ -10,7 +10,7 @@
   "user_password": "Password",
   "already_have_account": "You already have an account?",
   "not_yet_account": "You don't have an account yet?",
-  "validation_required": "The \"{fielt_name}\" is required",
+  "validation_required": "The \"{fielt_name}\" is required.",
   "@validation_required": {
     "description": "Error message when a required field is not filled",
     "placeholders": {

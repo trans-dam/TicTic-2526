@@ -10,7 +10,7 @@
   "user_password": "Mot de passe",
   "already_have_account": "Vous avez déjà un compte ?",
   "not_yet_account": "Vous n'avez pas encore de compte ?",
-  "validation_required": "Le champ \"{fielt_name}\" est requis",
+  "validation_required": "Le champ \"{fielt_name}\" est requis.",
   "@validation_required": {
     "description": "Message d'erreur lorsqu'un champ requis n'est pas rempli",
     "placeholders": {
