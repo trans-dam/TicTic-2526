@@ -19,7 +19,7 @@ class RegisterScreen extends StatelessWidget {
 
   static const routeName = "/register";
   final _registerFormKey = GlobalKey<FormState>();
-  final _usernameController = TextEditingController(text: kDebugMode ? "daniel.schreurs@hepl.be" : null);
+  final _usernameController = TextEditingController(text: kDebugMode ? "Daniel" : null);
   final _emailController = TextEditingController(text: kDebugMode ? "daniel.schreurs@hepl.be" : null);
   final _passwordController = TextEditingController(text: kDebugMode ? "1234567890" : null);
 
