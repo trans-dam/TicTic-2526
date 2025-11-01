@@ -18,10 +18,6 @@ class User {
   }
 
   Map<String, Object?> toJson() {
-    return {
-      'firstName': firstName,
-      'lastName': lastName,
-      'email': email,
-    };
+    return {'firstName': firstName, 'lastName': lastName, 'email': email};
   }
 }
