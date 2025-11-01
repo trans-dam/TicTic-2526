@@ -42,6 +42,8 @@ dependencies:
   validator_regex: ^1.1.1
   firebase_core: ^4.2.0
   firebase_auth: ^6.1.1
+  dto:
+    path: ../dto
 
 dev_dependencies:
   flutter_test:

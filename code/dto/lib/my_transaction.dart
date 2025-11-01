@@ -1,6 +1,7 @@
 import 'package:dto/user.dart';
 
 class MyTransaction {
+  final String id;
   final String title;
   final String? description;
   final double amount;
@@ -9,6 +10,7 @@ class MyTransaction {
   final List<User> concerns;
 
   const MyTransaction({
+    required this.id,
     required this.title,
     this.description,
     required this.amount,

@@ -1,6 +1,7 @@
 import 'my_transaction.dart';
 
 class Team {
+  final String id;
   final String title;
   final String? picturePath;
   final List<String>? tags;
@@ -9,6 +10,7 @@ class Team {
   final List<MyTransaction>? myTransactions;
 
   const Team({
+    required this.id,
     required this.title,
     this.picturePath,
     this.tags,
