@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/sizes.dart';
@@ -7,6 +8,8 @@ import 'package:tictic/screens/welcome/widgets/action_buttons.dart';
 import 'package:tictic/screens/welcome/widgets/horizontal_diver_with_text.dart';
 import 'package:tictic/widgets/svg_logo.dart';
 import 'package:tictic/screens/welcome/widgets/text_slider.dart';
+
+import '../home/home_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -26,7 +29,11 @@ class WelcomeScreen extends StatelessWidget {
           TextSlider(),
           Spacer(),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              FirebaseAuth.instance.signInAnonymously().then((v){
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              });
+            },
             style: ElevatedButton.styleFrom(backgroundColor: kMainColor),
             child: Text(AppLocalizations.of(context)!.continueWithOutLogin),
           ),
