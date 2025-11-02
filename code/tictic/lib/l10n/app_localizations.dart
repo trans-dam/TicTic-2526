@@ -197,6 +197,12 @@ abstract class AppLocalizations {
   /// **'participants'**
   String get participants;
 
+  /// No description provided for @hidde_transactions.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide transactions'**
+  String get hidde_transactions;
+
   /// Error message when a required field is not filled
   ///
   /// In en, this message translates to:

@@ -4,10 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/sizes.dart';
 import 'package:tictic/data/teams.dart';
-import 'package:tictic/screens/home/widgets/group_card.dart';
 import 'package:tictic/screens/home/widgets/home_sub_title.dart';
 import 'package:tictic/screens/home/widgets/home_title.dart';
 import 'package:tictic/screens/home/widgets/stat_slider.dart';
+import 'package:tictic/screens/home/widgets/team_overview.dart';
 import 'package:tictic/screens/welcome/welcome_screen.dart';
 import 'package:tictic/widgets/title_sec.dart';
 
@@ -62,7 +62,10 @@ class HomeScreen extends StatelessWidget {
         actions: [
           ClipOval(
             child: SvgPicture.asset(
-              colorFilter: ColorFilter.mode(kBackgroundColorCard, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(
+                kBackgroundColorCard,
+                BlendMode.srcIn,
+              ),
               "assets/icons/logo.svg",
               width: kProfilSizeImage,
               height: kProfilSizeImage,
@@ -73,7 +76,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(height: kVerticalPaddingL),
             ClipOval(
@@ -86,13 +89,20 @@ class HomeScreen extends StatelessWidget {
             StatSlider(),
             SizedBox(height: kVerticalPaddingL),
             TitleSec(title: "Vos groupes"),
+            SizedBox(height: kVerticalPadding),
             Column(
+              spacing: 0,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: teams.map((team) {
-                return GroupCard(team: team);
+                return TeamOverview(team: team);
               }).toList(),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
       ),
     );
   }

@@ -5,3 +5,5 @@ final currencyFormat = NumberFormat.currency(
     customPattern: '#,### \u00a4',
     symbol: '€',
     decimalDigits: 2);
+
+final dateFormat = DateFormat('dd/MM/yyyy');

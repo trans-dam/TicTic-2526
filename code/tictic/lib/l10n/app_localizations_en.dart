@@ -60,6 +60,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get participants => 'participants';
 
   @override
+  String get hidde_transactions => 'Hide transactions';
+
+  @override
   String validation_required(Object fielt_name) {
     return 'The \"$fielt_name\" is required.';
   }

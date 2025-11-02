@@ -4,6 +4,7 @@ const kVerticalSpacing = 20.0;
 const kTextSliderHeight = 50.0;
 const kBorderRadius = 24.0;
 const kBorderRadiusS = kBorderRadius / 2;
+const kBorderRadiusXS = kBorderRadiusS / 2;
 
 const kLogoSize = 44.0;
 const kProfileSize = 108.0;

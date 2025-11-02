@@ -1,14 +1,15 @@
 import 'package:dto/team.dart';
 import 'package:flutter/material.dart';
-import 'package:tictic/helpers/currency.dart';
 import 'package:tictic/l10n/app_localizations.dart';
+import 'package:tictic/screens/home/widgets/team_picture.dart';
 
 import '../../../constants/colors.dart';
 import '../../../constants/fonts.dart';
 import '../../../constants/sizes.dart';
+import '../../../helpers/format.dart';
 
-class GroupCard extends StatelessWidget {
-  const GroupCard({super.key, required this.team});
+class TeamCard extends StatelessWidget {
+  const TeamCard({super.key, required this.team});
 
   final Team team;
 
@@ -21,10 +22,6 @@ class GroupCard extends StatelessWidget {
         boxShadow: [kShadow],
       ),
       width: double.infinity,
-      margin: EdgeInsets.symmetric(
-        horizontal: kHorizontalPadding,
-        vertical: kVerticalPadding,
-      ),
       padding: EdgeInsets.symmetric(
         horizontal: kHorizontalPadding,
         vertical: kVerticalPaddingS,
@@ -35,27 +32,13 @@ class GroupCard extends StatelessWidget {
           Row(
             children: [
               Expanded(child: Text(team.title, style: kLabelStyle)),
-              Text("1200€"),
+              Text(currencyFormat.format(team.getSum()).toString()),
             ],
           ),
           SizedBox(height: kVerticalPaddingS),
           Row(
             children: [
-              ClipOval(
-                child: team.picturePath != null
-                    ? Image.asset(
-                        team.picturePath!,
-                        width: kProfilSizeImage,
-                        height: kProfilSizeImage,
-                        fit: BoxFit.cover,
-                      )
-                    : Container(
-                        width: kProfilSizeImage,
-                        height: kProfilSizeImage,
-                        color: kTertiaryColor,
-                        child: Icon(Icons.group, color: kBackgroundColorCard),
-                      ),
-              ),
+              TeamPicture(path: team.picturePath),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +55,9 @@ class GroupCard extends StatelessWidget {
                               : SizedBox(),
                         ),
                         Text(
-                          currencyFormat.format(team.getSum()).toString(),
+                          currencyFormat
+                              .format(team.myTransactions?[0].amount)
+                              .toString(),
                           style: kLabelStyle,
                         ),
                       ],
