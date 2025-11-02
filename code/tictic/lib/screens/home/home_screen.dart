@@ -1,9 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:tictic/constants/fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tictic/constants/colors.dart';
 import 'package:tictic/constants/sizes.dart';
+import 'package:tictic/data/teams.dart';
+import 'package:tictic/screens/home/widgets/group_card.dart';
+import 'package:tictic/screens/home/widgets/home_sub_title.dart';
+import 'package:tictic/screens/home/widgets/home_title.dart';
 import 'package:tictic/screens/home/widgets/stat_slider.dart';
 import 'package:tictic/screens/welcome/welcome_screen.dart';
+import 'package:tictic/widgets/title_sec.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -55,33 +61,36 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         actions: [
           ClipOval(
-            child: Image.asset("assets/img/dog.png", height: kProfilSizeImage),
+            child: SvgPicture.asset(
+              colorFilter: ColorFilter.mode(kBackgroundColorCard, BlendMode.srcIn),
+              "assets/icons/logo.svg",
+              width: kProfilSizeImage,
+              height: kProfilSizeImage,
+            ),
           ),
           SizedBox(width: kHorizontalPadding),
         ],
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: kHorizontalPadding,
-              ),
-              child: Row(
-                children: [Text('Bonjour, Daniel !', style: kTitleHome)],
-              ),
+            SizedBox(height: kVerticalPaddingL),
+            ClipOval(
+              child: Image.asset("assets/img/dog.png", height: kProfileSize),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: kHorizontalPadding,
-              ),
-              child: Row(
-                children: [Text("On vous doit de l’argent", style: kTagLine)],
-              ),
-            ),
-            SizedBox(height: kVerticalPaddingXL),
+            SizedBox(height: kVerticalPaddingL),
+            HomeTitle(),
+            HomeSubTitle(),
+            SizedBox(height: kVerticalPaddingL),
             StatSlider(),
+            SizedBox(height: kVerticalPaddingL),
+            TitleSec(title: "Vos groupes"),
+            Column(
+              children: teams.map((team) {
+                return GroupCard(team: team);
+              }).toList(),
+            ),
           ],
         ),
       ),

@@ -78,6 +78,4 @@ const kTextDiverStyle = TextStyle(
 );
 const kInfoIconSize = 15.0;
 
-const kLogoSize = 44.0;
-const kProfileSize = 108.0;
-const kProfileSizeSmall = kProfileSize * .8;
+

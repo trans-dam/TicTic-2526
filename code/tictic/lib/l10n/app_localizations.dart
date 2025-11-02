@@ -191,6 +191,12 @@ abstract class AppLocalizations {
   /// **'You don\'t have an account yet?'**
   String get not_yet_account;
 
+  /// No description provided for @participants.
+  ///
+  /// In en, this message translates to:
+  /// **'participants'**
+  String get participants;
+
   /// Error message when a required field is not filled
   ///
   /// In en, this message translates to:

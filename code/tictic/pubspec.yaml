@@ -44,6 +44,7 @@ dependencies:
   firebase_auth: ^6.1.1
   dto:
     path: ../dto
+  collection: ^1.19.1
 
 dev_dependencies:
   flutter_test:

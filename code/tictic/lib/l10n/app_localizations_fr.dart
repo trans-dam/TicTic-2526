@@ -57,6 +57,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get not_yet_account => 'Vous n\'avez pas encore de compte ?';
 
   @override
+  String get participants => 'participants';
+
+  @override
   String validation_required(Object fielt_name) {
     return 'Le champ \"$fielt_name\" est requis.';
   }

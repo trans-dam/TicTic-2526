@@ -20,7 +20,7 @@ class StatCard extends StatelessWidget {
       decoration: BoxDecoration(
         backgroundBlendMode: BlendMode.luminosity,
         color: kBackgroundColor.withValues(alpha: 0.8),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(kBorderRadiusS),
         boxShadow: [kShadow],
       ),
       child: Padding(

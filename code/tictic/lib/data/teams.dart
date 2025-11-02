@@ -1,5 +1,6 @@
-
+import 'package:collection/collection.dart';
 import 'package:dto/team.dart';
+import 'package:tictic/data/transactions.dart';
 import 'package:tictic/data/users.dart';
 
 String generateId() {
@@ -15,6 +16,7 @@ List<Team> teams = [
     picturePath: "assets/img/team-1.png",
     startDate: DateTime(2023, 8, 31),
     users: [users[0].email, users[1].email, users[2].email],
+    myTransactions: transactions.sample(15).toList(),
     tags: const ["Coding", "Magic", "Geeks"],
   ),
   Team(
@@ -23,20 +25,23 @@ List<Team> teams = [
     picturePath: "assets/img/team-2.png",
     startDate: DateTime(2023, 9, 15),
     users: [users[3].email, users[4].email, users[5].email],
-    tags: const ["Web Development", "Design", "Networking"],
+    myTransactions: transactions.sample(15).toList(),
+    tags: const ["WebDevelopment", "Design", "Networking"],
   ),
   Team(
     id: generateId(),
     title: "🎮 Game Gurus",
     picturePath: "assets/img/team-3.png",
     startDate: DateTime(2023, 9, 30),
-    users: [users[0].email, users[2].email, users[4].email],
+    myTransactions: transactions.sample(10).toList(),
+    users: [users[0].email, users[1].email, users[2].email, users[4].email],
   ),
   Team(
     id: generateId(),
     title: "✨ Nouveau groupe",
     picturePath: "assets/img/team-4.png",
     startDate: DateTime(2023, 9, 30),
+    myTransactions: transactions.sample(20).toList(),
     users: [users[0].email, users[2].email, users[4].email],
   ),
 ];
