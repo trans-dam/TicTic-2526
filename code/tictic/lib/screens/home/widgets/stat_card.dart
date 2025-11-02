@@ -32,7 +32,7 @@ class StatCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Text(title, style: kLabelStyle),
+            Text(title, style: kLabelStyle, textAlign: TextAlign.end),
             Spacer(),
             Text(subtitle, style: kTitleBigStat, textAlign: TextAlign.end),
           ],
